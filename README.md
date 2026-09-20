@@ -1,11 +1,23 @@
 # ResearchMate – Agentic RAG for Research Paper Analysis
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://research-paper-analyzer7.streamlit.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+🚀 **Live Deployed App:** [https://research-paper-analyzer7.streamlit.app/](https://research-paper-analyzer7.streamlit.app/)
+
 ResearchMate is a simple, Python-based Agentic Retrieval-Augmented Generation (RAG) project designed to analyze scientific research papers. 
 
 Instead of relying on a single LLM prompt, ResearchMate uses an agentic workflow:
 1. **Retriever Agent**: Finds relevant sections from the paper using FAISS vector search.
 2. **Research Analyst Agent**: Generates an answer strictly from the retrieved context using Google Gemini.
 3. **Critic Agent**: Verifies whether the answer is supported by the paper and triggers a revision if unsupported claims are found.
+
+---
+
+## 🌐 Live Demo
+
+You can try the application directly without installing anything or entering an API key:
+👉 **[Open ResearchMate on Streamlit Cloud](https://research-paper-analyzer7.streamlit.app/)**
 
 ---
 
@@ -81,7 +93,7 @@ research-paper-analyzer/
 
 ---
 
-## Installation & Setup
+## Local Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -114,13 +126,10 @@ Open your browser at `http://localhost:8501`.
 
 ## Deployment / Streamlit Secrets
 
-When deploying to **Streamlit Community Cloud**:
-1. In your Streamlit Cloud dashboard, go to your app's **Settings** -> **Secrets**.
-2. Add your Gemini API key:
-   ```toml
-   GEMINI_API_KEY = "your_actual_api_key_here"
-   ```
-3. Save and deploy. Users visiting the deployed application do not need to enter an API key; the application reads it securely from Streamlit Secrets.
+The project is deployed on **Streamlit Community Cloud**:
+- **App URL**: [https://research-paper-analyzer7.streamlit.app/](https://research-paper-analyzer7.streamlit.app/)
+- The Gemini API key is configured securely in **Streamlit Secrets** (`GEMINI_API_KEY = "..."`).
+- Users of the deployed application can immediately upload papers and ask questions without providing their own API key.
 
 ---
 
